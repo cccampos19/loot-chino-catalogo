@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loot Chino - Catálogo de Productos Chinos</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
-    
+
     <style>
         * {
             margin: 0;
@@ -14,13 +14,13 @@
         }
 
         :root {
-            --color-primary: #9CB89D;        /* Sage Green */
-            --color-secondary: #A4AC86;      /* Olive Green */
-            --color-accent: #C4B59A;         /* Warm Beige */
-            --color-text: #3C3C3C;           /* Dark Gray */
-            --color-light: #F7F7F5;          /* Off White */
+            --color-primary: #D0291E;        /* Chinese Red */
+            --color-secondary: #A01810;      /* Deep Red */
+            --color-accent: #D4A017;         /* Gold */
+            --color-text: #1A1A1A;           /* Deep Black */
+            --color-light: #FEF5E7;          /* Cream */
             --color-white: #FFFFFF;          /* Pure White */
-            --color-border: #E8E8E6;         /* Light Border */
+            --color-border: #E8DACC;         /* Light Gold Border */
         }
 
         html, body {
@@ -158,6 +158,7 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            group/card: true;
         }
 
         .producto-card:hover {
@@ -320,6 +321,11 @@
                 bottom: 20px;
                 right: 20px;
             }
+
+            .nav-bar {
+                padding: 20px;
+                gap: 12px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -351,8 +357,8 @@
     <div class="header">
         <div class="header-content">
             <h1>樂 CHINO</h1>
-            <p class="subtitle">Catálogo de Productos</p>
-            <p class="tagline">Descubre la mejor selección de productos chinos importados</p>
+            <p class="subtitle">Productos Chinos Importados</p>
+            <p class="tagline">La mejor selección de bebidas y snacks asiáticos</p>
         </div>
     </div>
 
@@ -366,120 +372,171 @@
 
     <div class="container">
         <div class="productos-grid">
+            <!-- Producto 1 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/mochis_fresa.png" alt="Mochis de Fresa" onerror="this.parentElement.textContent='🍡'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/mochis_fresa.png" alt="Mochi Sabor Fresa" onerror="this.parentElement.textContent='🍡'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Mochis de Fresa</h3>
-                    <p class="producto-detalle">Dulces suave y delicado</p>
-                    <p class="producto-precio">$45</p>
+                    <h3 class="producto-nombre">Mochi Sabor Fresa</h3>
+                    <p class="producto-detalle">126G - Dulce y delicado</p>
+                    <p class="producto-precio">$120</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Mochis%20de%20Fresa')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 2 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/buldak_carbonara.jpg" alt="Buldak Carbonara" onerror="this.parentElement.textContent='🍜'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/buldak_carbonara.jpg" alt="Fideos Samyang Carbonara Picante" onerror="this.parentElement.textContent='🍜'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Buldak Carbonara</h3>
-                    <p class="producto-detalle">Fideos picantes coreano</p>
-                    <p class="producto-precio">$35</p>
+                    <h3 class="producto-nombre">Fideos Samyang Carbonara Picante</h3>
+                    <p class="producto-detalle">130G - Fideos picantes</p>
+                    <p class="producto-precio">$50</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Buldak%20Carbonara')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 3 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/buldak_spicyhabanero.webp" alt="Buldak Spicy Habanero" onerror="this.parentElement.textContent='🌶️'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/buldak_spicyhabanero.webp" alt="Samyang Sabor Habanero Limón" onerror="this.parentElement.textContent='🌶️'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Buldak Spicy Habanero</h3>
-                    <p class="producto-detalle">Fideos extra picantes</p>
-                    <p class="producto-precio">$38</p>
+                    <h3 class="producto-nombre">Samyang Sabor Habanero Limón</h3>
+                    <p class="producto-detalle">135G - Fideos extra picantes</p>
+                    <p class="producto-precio">$50</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Buldak%20Spicy%20Habanero')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 4 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/fideos_caldo.png" alt="Fideos en Caldo" onerror="this.parentElement.textContent='🍲'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/fideos_caldo.png" alt="Fideos 668G" onerror="this.parentElement.textContent='🍲'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Fideos en Caldo</h3>
-                    <p class="producto-detalle">Sopa tradicional china</p>
-                    <p class="producto-precio">$32</p>
+                    <h3 class="producto-nombre">Fideos 668G</h3>
+                    <p class="producto-detalle">668G - Sopa tradicional china</p>
+                    <p class="producto-precio">$250</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Fideos%20en%20Caldo')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 5 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/te_herbal_wanglaoji.png" alt="Té Herbal Wanglaoji" onerror="this.parentElement.textContent='🍵'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/te_herbal_wanglaoji.png" alt="Bebida Lata de Hierbas" onerror="this.parentElement.textContent='🍵'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Té Herbal Wanglaoji</h3>
-                    <p class="producto-detalle">Bebida refrescante tradicional</p>
-                    <p class="producto-precio">$28</p>
+                    <h3 class="producto-nombre">Bebida Lata de Hierbas</h3>
+                    <p class="producto-detalle">310ML - Bebida refrescante</p>
+                    <p class="producto-precio">$70</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Té%20Herbal%20Wanglaoji')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 6 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/te_hierbas_jiduobao.webp" alt="Té de Hierbas Jiduobao" onerror="this.parentElement.textContent='🍶'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/te_hierbas_jiduobao.webp" alt="Bebida Lata de Hierbas Premium" onerror="this.parentElement.textContent='🍶'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Té de Hierbas Jiduobao</h3>
-                    <p class="producto-detalle">Bebida herbal medicinal</p>
-                    <p class="producto-precio">$30</p>
+                    <h3 class="producto-nombre">Bebida Lata de Hierbas Premium</h3>
+                    <p class="producto-detalle">310ML - Bebida herbal medicinal</p>
+                    <p class="producto-precio">$80</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Té%20de%20Hierbas%20Jiduobao')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 7 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/bebida_lechecoco.jpeg" alt="Bebida Leche Coco" onerror="this.parentElement.textContent='🥥'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/bebida_lechecoco.jpeg" alt="Bebida Leche de Coco" onerror="this.parentElement.textContent='🥥'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Bebida Leche Coco</h3>
-                    <p class="producto-detalle">Bebida refrescante tropical</p>
-                    <p class="producto-precio">$25</p>
+                    <h3 class="producto-nombre">Bebida Leche de Coco</h3>
+                    <p class="producto-detalle">245ML - Bebida tropical</p>
+                    <p class="producto-precio">$90</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Bebida%20Leche%20Coco')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 8 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/bebida_naranja_estilo_hong_kong.jpg" alt="Bebida Naranja Hong Kong" onerror="this.parentElement.textContent='🧡'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/bebida_naranja_estilo_hong_kong.jpg" alt="Bebida Sabor Naranja" onerror="this.parentElement.textContent='🧡'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Bebida Naranja Hong Kong</h3>
-                    <p class="producto-detalle">Bebida cítrica oriental</p>
-                    <p class="producto-precio">$26</p>
+                    <h3 class="producto-nombre">Bebida Sabor Naranja</h3>
+                    <p class="producto-detalle">620ML - Bebida cítrica oriental</p>
+                    <p class="producto-precio">$90</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Bebida%20Naranja%20Hong%20Kong')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 9 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/pocky_berries.webp" alt="Pocky Berries" onerror="this.parentElement.textContent='🫐'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/pocky_berries.webp" alt="Galleta de Pocky" onerror="this.parentElement.textContent='🫐'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Pocky Berries</h3>
-                    <p class="producto-detalle">Paletas crujientes de bayas</p>
-                    <p class="producto-precio">$20</p>
+                    <h3 class="producto-nombre">Galleta de Pocky</h3>
+                    <p class="producto-detalle">55G - Paletas crujientes</p>
+                    <p class="producto-precio">$80</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Pocky%20Berries')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 10 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/galletas_naranja.webp" alt="Galletas Naranja" onerror="this.parentElement.textContent='🍊'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/galletas_naranja.webp" alt="Galleta Sabor Naranja" onerror="this.parentElement.textContent='🍊'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Galletas Naranja</h3>
-                    <p class="producto-detalle">Galletas crujientes citrus</p>
-                    <p class="producto-precio">$22</p>
+                    <h3 class="producto-nombre">Galleta Sabor Naranja</h3>
+                    <p class="producto-detalle">85G - Galletas crujientes</p>
+                    <p class="producto-precio">$50</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Galletas%20Naranja')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 11 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/galletas_pina.webp" alt="Galletas Piña" onerror="this.parentElement.textContent='🍍'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/galletas_pina.webp" alt="Galleta Sabor Piña" onerror="this.parentElement.textContent='🍍'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Galletas Piña</h3>
-                    <p class="producto-detalle">Galletas tropicales dulces</p>
-                    <p class="producto-precio">$24</p>
+                    <h3 class="producto-nombre">Galleta Sabor Piña</h3>
+                    <p class="producto-detalle">85G - Galletas tropicales</p>
+                    <p class="producto-precio">$50</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Galletas%20Piña')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 12 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/pocky_peach.jpg" alt="Pocky Peach" onerror="this.parentElement.textContent='🍑'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/pocky_peach.jpg" alt="Galleta Sabor Limón" onerror="this.parentElement.textContent='🍑'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Pocky Peach</h3>
-                    <p class="producto-detalle">Paletas sabor durazno</p>
-                    <p class="producto-precio">$21</p>
+                    <h3 class="producto-nombre">Galleta Sabor Limón</h3>
+                    <p class="producto-detalle">85G - Paletas sabor limón</p>
+                    <p class="producto-precio">$50</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Pocky%20Peach')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- Producto 13 -->
             <div class="producto-card">
-                <div class="producto-imagen"><img src="imagenes/polvo_matcha.jpg" alt="Polvo Matcha" onerror="this.parentElement.textContent='💚'"></div>
+                <div class="producto-imagen">
+                    <img src="imagenes/polvo_matcha.jpg" alt="Polvo de Matcha" onerror="this.parentElement.textContent='💚'">
+                </div>
                 <div class="producto-info">
-                    <h3 class="producto-nombre">Polvo Matcha Premium</h3>
-                    <p class="producto-detalle">Té verde ceremonial japonés</p>
-                    <p class="producto-precio">$55</p>
+                    <h3 class="producto-nombre">Polvo de Matcha</h3>
+                    <p class="producto-detalle">100G - Té verde premium</p>
+                    <p class="producto-precio">$150</p>
                     <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Polvo%20Matcha%20Premium')">PEDIR</button>
                 </div>
             </div>
@@ -493,6 +550,7 @@
         <p style="margin-top: 20px; font-size: 12px; opacity: 0.6;">© 2026 Loot Chino. Todos los derechos reservados.</p>
     </div>
 
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
     <a href="https://wa.me/522222528778?text=Hola%20Loot%20Chino,%20me%20interesa%20conocer%20más%20sobre%20tus%20productos" class="whatsapp-btn" title="Contactar por WhatsApp">
         <span>💬</span>
     </a>

@@ -1,0 +1,51 @@
+# Dependencias
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos temporales
+.tmp/
+temp/
+*.log
+
+# Configuración personal
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+build/
+
+# Vercel
+.vercel/
+
+# IDEs
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# OS
+*.zip
+*.rar
+.AppleDouble
+.LSOverride
+
+# Archivos no necesarios
+*.backup
+*.bak
+~*
+
+# Node
+.npm
+package-lock.json
+yarn.lock

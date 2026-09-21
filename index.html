@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loot Chino - Catálogo Premium</title>
-
-    <!-- Google Fonts: Tipografías Chinas y Asiáticas -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;900&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
-
+    <title>Loot Chino - Catálogo de Productos Chinos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -16,614 +14,487 @@
         }
 
         :root {
-            --color-primary: #1F4E78;      /* Azul oscuro */
-            --color-accent: #E7A72C;       /* Dorado */
-            --color-highlight: #D13631;   /* Rojo */
-            --color-light: #F8F9FA;        /* Gris claro */
-            --color-text: #2C3E50;         /* Texto oscuro */
+            --color-primary: #9CB89D;        /* Sage Green */
+            --color-secondary: #A4AC86;      /* Olive Green */
+            --color-accent: #C4B59A;         /* Warm Beige */
+            --color-text: #3C3C3C;           /* Dark Gray */
+            --color-light: #F7F7F5;          /* Off White */
+            --color-white: #FFFFFF;          /* Pure White */
+            --color-border: #E8E8E6;         /* Light Border */
         }
 
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background: linear-gradient(135deg, var(--color-primary) 0%, #2a5d9d 100%);
+        html, body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--color-white);
             color: var(--color-text);
-            min-height: 100vh;
-            padding: 20px;
+            line-height: 1.6;
         }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* HEADER */
+        /* HEADER / HERO */
         .header {
-            background: white;
-            padding: 50px 30px;
-            border-radius: 15px 15px 0 0;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            padding: 80px 30px;
             text-align: center;
-            margin-bottom: 40px;
+            color: var(--color-white);
             position: relative;
             overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .header::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-highlight));
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(100px, -100px);
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 50%;
+            transform: translate(-100px, 100px);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
         }
 
         .header h1 {
             font-family: 'Ma Shan Zheng', cursive;
-            font-size: 72px;
-            color: var(--color-primary);
-            margin-bottom: 12px;
+            font-size: 120px;
+            margin-bottom: 20px;
             font-weight: 400;
-            letter-spacing: 4px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+            letter-spacing: 8px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+            line-height: 1;
         }
 
         .header .subtitle {
-            font-family: 'Noto Sans SC', sans-serif;
-            font-size: 28px;
-            color: var(--color-accent);
-            font-weight: 600;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            letter-spacing: 6px;
-            margin-bottom: 8px;
+            margin-bottom: 30px;
+            opacity: 0.95;
         }
 
+        .header .tagline {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            opacity: 0.85;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* NAVEGACIÓN / FILTROS */
+        .nav-bar {
+            background: var(--color-white);
+            padding: 30px;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar .badge {
+            background: var(--color-light);
+            color: var(--color-text);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid var(--color-border);
+            transition: all 0.3s ease;
+        }
+
+        .nav-bar .badge:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+        }
+
+        /* CONTENEDOR */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
 
         /* GRID DE PRODUCTOS */
         .productos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            padding: 40px 30px;
-            background: white;
-            border-radius: 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            padding: 60px 30px;
+            background: var(--color-white);
         }
 
+        /* TARJETA DE PRODUCTO */
         .producto-card {
-            background: var(--color-light);
-            border-radius: 16px;
+            background: var(--color-white);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--color-border);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
             height: 100%;
-            border: 2px solid transparent;
-            position: relative;
-        }
-
-        .producto-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--color-accent), var(--color-highlight));
-            z-index: 10;
         }
 
         .producto-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 16px 32px rgba(31, 78, 120, 0.2);
-            border-color: var(--color-accent);
-        }
-
-        .producto-imagen-container {
-            width: 100%;
-            height: 320px;
-            background: linear-gradient(135deg, var(--color-primary) 0%, #2a5d9d 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
+            border-color: var(--color-primary);
+            box-shadow: 0 12px 32px rgba(156, 184, 157, 0.15);
+            transform: translateY(-4px);
         }
 
         .producto-imagen {
             width: 100%;
+            height: 280px;
+            background: var(--color-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            font-size: 80px;
+            font-family: 'Apple Color Emoji';
+        }
+
+        .producto-imagen img {
+            width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .producto-card:hover .producto-imagen {
-            transform: scale(1.05);
-        }
-
-        .imagen-placeholder {
-            font-size: 100px;
-            opacity: 0.3;
+        .producto-card:hover .producto-imagen img {
+            transform: scale(1.08);
         }
 
         .producto-info {
-            padding: 28px;
-            flex: 1;
+            padding: 24px;
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .producto-especificaciones {
-            margin-bottom: 20px;
-        }
-
-        .presentacion {
-            font-size: 11px;
-            color: var(--color-accent);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-            margin-bottom: 8px;
         }
 
         .producto-nombre {
-            font-family: 'Noto Sans SC', sans-serif;
             font-size: 18px;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 6px;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 8px;
             line-height: 1.3;
         }
 
-        .producto-marca {
-            font-size: 13px;
-            color: #666;
-            font-weight: 500;
+        .producto-detalle {
+            font-size: 14px;
+            color: #999;
             margin-bottom: 16px;
+            font-weight: 400;
         }
 
         .producto-precio {
-            padding-top: 20px;
-            border-top: 2px solid var(--color-accent);
-            margin-top: 20px;
-        }
-
-        .precio-label {
-            font-size: 10px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .precio-value {
-            font-family: 'Noto Sans SC', sans-serif;
-            font-size: 32px;
-            font-weight: 900;
-            color: var(--color-highlight);
-        }
-
-        .precio-currency {
             font-size: 22px;
-            margin-right: 4px;
-        }
-
-        /* FOOTER */
-        .footer {
-            background: var(--color-primary);
-            padding: 40px 30px;
-            border-radius: 0 0 15px 15px;
-            text-align: center;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            color: white;
-        }
-
-        .footer-date {
-            font-size: 13px;
-            color: var(--color-accent);
             font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+        }
+
+        .producto-boton {
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
             letter-spacing: 1px;
-            margin-bottom: 12px;
+            font-family: 'Noto Sans SC', sans-serif;
+            margin-top: auto;
         }
 
-        .footer-phone {
-            font-size: 18px;
-            font-weight: 700;
-            color: white;
+        .producto-boton:hover {
+            background: var(--color-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(156, 184, 157, 0.3);
         }
 
-        .footer-phone-label {
-            font-size: 12px;
-            color: var(--color-accent);
-            margin-bottom: 8px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .productos-grid {
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 24px;
-                padding: 30px 20px;
-            }
-
-            .header h1 {
-                font-size: 52px;
-            }
-
-            .producto-imagen-container {
-                height: 280px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 12px;
-            }
-
-            .header {
-                padding: 35px 20px;
-                margin-bottom: 25px;
-            }
-
-            .header h1 {
-                font-size: 42px;
-            }
-
-            .header .subtitle {
-                font-size: 22px;
-            }
-
-            .productos-grid {
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 16px;
-                padding: 20px;
-            }
-
-            .producto-imagen-container {
-                height: 240px;
-            }
-
-            .producto-info {
-                padding: 18px;
-            }
-
-            .precio-value {
-                font-size: 26px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header {
-                padding: 25px 15px;
-            }
-
-            .header h1 {
-                font-size: 32px;
-            }
-
-            .header .subtitle {
-                font-size: 18px;
-                letter-spacing: 3px;
-            }
-
-            .productos-grid {
-                grid-template-columns: 1fr;
-                gap: 12px;
-                padding: 15px;
-            }
-
-            .producto-imagen-container {
-                height: 200px;
-            }
-
-            .precio-value {
-                font-size: 24px;
-            }
-        }
-
-        /* Botón WhatsApp Flotante */
-        .whatsapp-button {
+        /* BOTÓN WHATSAPP FLOTANTE */
+        .whatsapp-btn {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 65px;
-            height: 65px;
-            background: #25D366;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25D366 0%, #20BA5B 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: white;
+            font-size: 32px;
             cursor: pointer;
-            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-            z-index: 999;
-            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
+            border: none;
+            z-index: 100;
         }
 
-        .whatsapp-button:hover {
+        .whatsapp-btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.6);
         }
 
-        .whatsapp-button svg {
-            width: 35px;
-            height: 35px;
+        /* FOOTER */
+        .footer {
+            background: var(--color-light);
+            padding: 40px 30px;
+            text-align: center;
+            border-top: 1px solid var(--color-border);
+            margin-top: 60px;
         }
 
+        .footer p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .footer .logo {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 32px;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .whatsapp-button {
-                bottom: 20px;
-                right: 20px;
-                width: 60px;
-                height: 60px;
+            .header h1 {
+                font-size: 60px;
             }
 
-            .whatsapp-button svg {
-                width: 32px;
-                height: 32px;
+            .header {
+                padding: 50px 20px;
+                min-height: 350px;
+            }
+
+            .productos-grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 24px;
+                padding: 40px 20px;
+            }
+
+            .producto-imagen {
+                height: 220px;
+            }
+
+            .whatsapp-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 48px;
+            }
+
+            .header .subtitle {
+                font-size: 16px;
+            }
+
+            .header .tagline {
+                font-size: 14px;
+            }
+
+            .productos-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 30px 16px;
+            }
+
+            .producto-imagen {
+                height: 200px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>LOOT CHINO</h1>
-            <div class="subtitle">Catálogo</div>
-        </div>
-
-        <div class="productos-grid">
-            <!-- Producto 1: Mochis Fresa -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/mochis_fresa.png" alt="Mochis Sabor Fresa" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🍡</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">126G</div>
-                        <div class="producto-nombre">Mochi Sabor Fresa</div>
-                        <div class="producto-marca">Premium</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>120</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 2: Buldak Carbonara -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/buldak_carbonara.jpg" alt="Buldak Carbonara" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🍜</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">130G</div>
-                        <div class="producto-nombre">Buldak Carbonara</div>
-                        <div class="producto-marca">Samyang</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>50</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 3: Buldak Spicy Habanero -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/buldak_spicyhabanero.webp" alt="Buldak Spicy Habanero" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🌶️</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">135G</div>
-                        <div class="producto-nombre">Buldak Spicy Habanero</div>
-                        <div class="producto-marca">Samyang</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>50</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 4: Fideos Caldo -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/fideos_caldo.png" alt="Fideos Caldo" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🥢</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">668G</div>
-                        <div class="producto-nombre">Fideos Premium</div>
-                        <div class="producto-marca">Caldo</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>250</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 5: Té Herbal Wanglaoji -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/te_herbal_wanglaoji.png" alt="Té Herbal Wanglaoji" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🍵</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">310ML</div>
-                        <div class="producto-nombre">Té Herbal Wanglaoji</div>
-                        <div class="producto-marca">Premium</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>70</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 6: Té Hierbas Jiduobao -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/te_hierbas_jiduobao.webp" alt="Té Hierbas Jiduobao" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🥤</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">310ML</div>
-                        <div class="producto-nombre">Té Hierbas Jiduobao</div>
-                        <div class="producto-marca">Select Premium</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>80</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 7: Bebida Leche de Coco -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/bebida_lechecoco.jpeg" alt="Bebida Leche de Coco" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🥥</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">245ML</div>
-                        <div class="producto-nombre">Bebida Leche de Coco</div>
-                        <div class="producto-marca">Tropical</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>90</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 8: Bebida Naranja Hong Kong -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/bebida_naranja_estilo_hong_kong.jpg" alt="Bebida Naranja" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🍊</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">620ML</div>
-                        <div class="producto-nombre">Bebida Naranja Hong Kong</div>
-                        <div class="producto-marca">Fresh</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>90</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 9: Pocky Berries -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/pocky_berries.webp" alt="Pocky Berries" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🍪</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">55G</div>
-                        <div class="producto-nombre">Pocky Berries</div>
-                        <div class="producto-marca">Pocky</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>80</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 10: Galletas Naranja -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/galletas_naranja.webp" alt="Galletas Naranja" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🍊</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">85G</div>
-                        <div class="producto-nombre">Galletas Naranja</div>
-                        <div class="producto-marca">Select</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>50</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 11: Galletas Piña -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/galletas_pina.webp" alt="Galletas Piña" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🍍</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">85G</div>
-                        <div class="producto-nombre">Galletas Piña</div>
-                        <div class="producto-marca">Select</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>50</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 12: Pocky Peach -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/pocky_peach.jpg" alt="Pocky Peach" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🍑</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">55G</div>
-                        <div class="producto-nombre">Pocky Peach</div>
-                        <div class="producto-marca">Pocky</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>50</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Producto 13: Polvo Matcha -->
-            <div class="producto-card">
-                <div class="producto-imagen-container">
-                    <img src="imagenes/polvo_matcha.jpg" alt="Polvo Matcha" class="producto-imagen" onerror="this.style.display='none'; this.parentElement.innerHTML += '<div class=imagen-placeholder>🍵</div>'">
-                </div>
-                <div class="producto-info">
-                    <div class="producto-especificaciones">
-                        <div class="presentacion">100G</div>
-                        <div class="producto-nombre">Polvo Matcha Premium</div>
-                        <div class="producto-marca">Premium Grade</div>
-                    </div>
-                    <div class="producto-precio">
-                        <div class="precio-label">Precio</div>
-                        <div class="precio-value"><span class="precio-currency">$</span>150</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <div class="footer-date">📅 Catálogo actualizado septiembre 2026</div>
-            <div class="footer-phone-label">Contáctanos</div>
-            <div class="footer-phone">☎ 2222528778</div>
+    <div class="header">
+        <div class="header-content">
+            <h1>樂 CHINO</h1>
+            <p class="subtitle">Catálogo de Productos</p>
+            <p class="tagline">Descubre la mejor selección de productos chinos importados</p>
         </div>
     </div>
 
-    <!-- Botón WhatsApp Flotante -->
-    <a href="https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20me%20interesa%20hacer%20un%20pedido%20de%20productos"
-       class="whatsapp-button"
-       title="¡Haz tu pedido por WhatsApp!">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.959 1.514 9.902 9.902 0 003.806 18.974c1.355 0 2.66-.356 3.789-.987l.141-.071 4.589 1.202-1.228-4.48.007-.128a9.9 9.9 0 001.673-5.438c0-5.514-4.486-9.992-10.009-9.992"/>
-        </svg>
+    <div class="nav-bar">
+        <div class="badge">Todos</div>
+        <div class="badge">Bebidas</div>
+        <div class="badge">Snacks</div>
+        <div class="badge">Dulces</div>
+        <div class="badge">Nuevos</div>
+    </div>
+
+    <div class="container">
+        <div class="productos-grid">
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/mochis_fresa.png" alt="Mochis de Fresa" onerror="this.parentElement.textContent='🍡'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Mochis de Fresa</h3>
+                    <p class="producto-detalle">Dulces suave y delicado</p>
+                    <p class="producto-precio">$45</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Mochis%20de%20Fresa')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/buldak_carbonara.jpg" alt="Buldak Carbonara" onerror="this.parentElement.textContent='🍜'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Buldak Carbonara</h3>
+                    <p class="producto-detalle">Fideos picantes coreano</p>
+                    <p class="producto-precio">$35</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Buldak%20Carbonara')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/buldak_spicyhabanero.webp" alt="Buldak Spicy Habanero" onerror="this.parentElement.textContent='🌶️'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Buldak Spicy Habanero</h3>
+                    <p class="producto-detalle">Fideos extra picantes</p>
+                    <p class="producto-precio">$38</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Buldak%20Spicy%20Habanero')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/fideos_caldo.png" alt="Fideos en Caldo" onerror="this.parentElement.textContent='🍲'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Fideos en Caldo</h3>
+                    <p class="producto-detalle">Sopa tradicional china</p>
+                    <p class="producto-precio">$32</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Fideos%20en%20Caldo')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/te_herbal_wanglaoji.png" alt="Té Herbal Wanglaoji" onerror="this.parentElement.textContent='🍵'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Té Herbal Wanglaoji</h3>
+                    <p class="producto-detalle">Bebida refrescante tradicional</p>
+                    <p class="producto-precio">$28</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Té%20Herbal%20Wanglaoji')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/te_hierbas_jiduobao.webp" alt="Té de Hierbas Jiduobao" onerror="this.parentElement.textContent='🍶'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Té de Hierbas Jiduobao</h3>
+                    <p class="producto-detalle">Bebida herbal medicinal</p>
+                    <p class="producto-precio">$30</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Té%20de%20Hierbas%20Jiduobao')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/bebida_lechecoco.jpeg" alt="Bebida Leche Coco" onerror="this.parentElement.textContent='🥥'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Bebida Leche Coco</h3>
+                    <p class="producto-detalle">Bebida refrescante tropical</p>
+                    <p class="producto-precio">$25</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Bebida%20Leche%20Coco')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/bebida_naranja_estilo_hong_kong.jpg" alt="Bebida Naranja Hong Kong" onerror="this.parentElement.textContent='🧡'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Bebida Naranja Hong Kong</h3>
+                    <p class="producto-detalle">Bebida cítrica oriental</p>
+                    <p class="producto-precio">$26</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Bebida%20Naranja%20Hong%20Kong')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/pocky_berries.webp" alt="Pocky Berries" onerror="this.parentElement.textContent='🫐'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Pocky Berries</h3>
+                    <p class="producto-detalle">Paletas crujientes de bayas</p>
+                    <p class="producto-precio">$20</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Pocky%20Berries')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/galletas_naranja.webp" alt="Galletas Naranja" onerror="this.parentElement.textContent='🍊'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Galletas Naranja</h3>
+                    <p class="producto-detalle">Galletas crujientes citrus</p>
+                    <p class="producto-precio">$22</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Galletas%20Naranja')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/galletas_pina.webp" alt="Galletas Piña" onerror="this.parentElement.textContent='🍍'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Galletas Piña</h3>
+                    <p class="producto-detalle">Galletas tropicales dulces</p>
+                    <p class="producto-precio">$24</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Galletas%20Piña')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/pocky_peach.jpg" alt="Pocky Peach" onerror="this.parentElement.textContent='🍑'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Pocky Peach</h3>
+                    <p class="producto-detalle">Paletas sabor durazno</p>
+                    <p class="producto-precio">$21</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Pocky%20Peach')">PEDIR</button>
+                </div>
+            </div>
+            <div class="producto-card">
+                <div class="producto-imagen"><img src="imagenes/polvo_matcha.jpg" alt="Polvo Matcha" onerror="this.parentElement.textContent='💚'"></div>
+                <div class="producto-info">
+                    <h3 class="producto-nombre">Polvo Matcha Premium</h3>
+                    <p class="producto-detalle">Té verde ceremonial japonés</p>
+                    <p class="producto-precio">$55</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Polvo%20Matcha%20Premium')">PEDIR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="logo">樂 CHINO</div>
+        <p><strong>Loot Chino</strong> - Productos chinos importados de calidad</p>
+        <p>📱 WhatsApp: <a href="https://wa.me/522222528778" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">+52 2222 528778</a></p>
+        <p style="margin-top: 20px; font-size: 12px; opacity: 0.6;">© 2026 Loot Chino. Todos los derechos reservados.</p>
+    </div>
+
+    <a href="https://wa.me/522222528778?text=Hola%20Loot%20Chino,%20me%20interesa%20conocer%20más%20sobre%20tus%20productos" class="whatsapp-btn" title="Contactar por WhatsApp">
+        <span>💬</span>
     </a>
 </body>
 </html>

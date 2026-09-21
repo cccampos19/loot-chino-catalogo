@@ -1,4 +1,10 @@
 {
-  "public": false,
+  "env": [],
+  "build": {
+    "env": {}
+  },
+  "buildCommand": null,
+  "outputDirectory": null,
+  "installCommand": null,
   "framework": null
 }

@@ -1,0 +1,19 @@
+{
+  "generado": "2026-09-22 21:10",
+  "origen": "Gestor_Loot_Chino_PRO.xlsm",
+  "productos": [
+    {"id": "P001", "nombre": "Mochi Sabor Fresa", "presentacion": "126G", "descripcion": "126G - Dulce y delicado", "grupo": "Dulces", "categoria": "MOCHIS", "precio": 120, "imagen": "imagenes/mochis_fresa.png"},
+    {"id": "P002", "nombre": "Fideos Samyang Carbonara Picante", "presentacion": "130G", "descripcion": "130G - Fideos picantes", "grupo": "Snacks", "categoria": "RAMEN/FIDEOS", "precio": 50, "imagen": "imagenes/buldak_carbonara.jpg"},
+    {"id": "P003", "nombre": "Samyang Sabor Habanero Limón", "presentacion": "135G", "descripcion": "135G - Fideos extra picantes", "grupo": "Snacks", "categoria": "RAMEN/FIDEOS", "precio": 50, "imagen": "imagenes/buldak_spicyhabanero.webp"},
+    {"id": "P004", "nombre": "Fideos 668G", "presentacion": "668G", "descripcion": "668G - Sopa tradicional china", "grupo": "Snacks", "categoria": "RAMEN/FIDEOS", "precio": 250, "imagen": "imagenes/fideos_caldo.png"},
+    {"id": "P005", "nombre": "Bebida Lata de Hierbas", "presentacion": "310ML", "descripcion": "310ML - Bebida refrescante", "grupo": "Bebidas", "categoria": "BEBIDAS", "precio": 50, "imagen": "imagenes/te_herbal_wanglaoji.png"},
+    {"id": "P006", "nombre": "Bebida Lata de Hierbas Premium", "presentacion": "310ML", "descripcion": "310ML - Bebida herbal medicinal", "grupo": "Bebidas", "categoria": "BEBIDAS", "precio": 70, "imagen": "imagenes/te_hierbas_jiduobao.webp"},
+    {"id": "P007", "nombre": "Bebida Leche de Coco", "presentacion": "245ML", "descripcion": "245ML - Bebida tropical", "grupo": "Bebidas", "categoria": "BEBIDAS", "precio": 70, "imagen": "imagenes/bebida_lechecoco.jpeg"},
+    {"id": "P008", "nombre": "Bebida Sabor Naranja", "presentacion": "620ML", "descripcion": "620ML - Bebida cítrica oriental", "grupo": "Bebidas", "categoria": "BEBIDAS", "precio": 90, "imagen": "imagenes/bebida_naranja_estilo_hong_kong.jpg"},
+    {"id": "P010", "nombre": "Galleta de Pocky", "presentacion": "55G", "descripcion": "55G - Paletas crujientes", "grupo": "Dulces", "categoria": "GALLETAS", "precio": 80, "imagen": "imagenes/pocky_berries.webp"},
+    {"id": "P011", "nombre": "Galleta Sabor Naranja", "presentacion": "85G", "descripcion": "85G - Galletas crujientes", "grupo": "Dulces", "categoria": "GALLETAS", "precio": 50, "imagen": "imagenes/galletas_naranja.webp"},
+    {"id": "P012", "nombre": "Galleta Sabor Piña", "presentacion": "85G", "descripcion": "85G - Galletas tropicales", "grupo": "Dulces", "categoria": "GALLETAS", "precio": 50, "imagen": "imagenes/galletas_pina.webp"},
+    {"id": "P013", "nombre": "Galleta Sabor Limón", "presentacion": "85G", "descripcion": "85G - Paletas sabor limón", "grupo": "Dulces", "categoria": "GALLETAS", "precio": 50, "imagen": "imagenes/pocky_peach.jpg"},
+    {"id": "P014", "nombre": "Polvo de Matcha", "presentacion": "100G", "descripcion": "100G - Té verde premium", "grupo": "Bebidas", "categoria": "MATCHA", "precio": 150, "imagen": "imagenes/polvo_matcha.jpg"}
+  ]
+}

@@ -132,6 +132,17 @@
             border-color: var(--color-primary);
         }
 
+        .nav-bar .badge.activo {
+            background: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        .producto-card.oculto {
+            display: none;
+        }
+
         /* CONTENEDOR */
         .container {
             max-width: 1200px;
@@ -363,17 +374,17 @@
     </div>
 
     <div class="nav-bar">
-        <div class="badge">Todos</div>
-        <div class="badge">Bebidas</div>
-        <div class="badge">Snacks</div>
-        <div class="badge">Dulces</div>
-        <div class="badge">Nuevos</div>
+        <div class="badge activo" data-filtro="Todos">Todos</div>
+        <div class="badge" data-filtro="Bebidas">Bebidas</div>
+        <div class="badge" data-filtro="Snacks">Snacks</div>
+        <div class="badge" data-filtro="Dulces">Dulces</div>
     </div>
 
     <div class="container">
         <div class="productos-grid">
-            <!-- Producto 1 -->
-            <div class="producto-card">
+            <!-- PRODUCTOS:INICIO -->
+            <!-- P001 -->
+            <div class="producto-card" data-grupo="Dulces" data-id="P001" data-nombre="mochi sabor fresa">
                 <div class="producto-imagen">
                     <img src="imagenes/mochis_fresa.png" alt="Mochi Sabor Fresa" onerror="this.parentElement.textContent='🍡'">
                 </div>
@@ -381,12 +392,12 @@
                     <h3 class="producto-nombre">Mochi Sabor Fresa</h3>
                     <p class="producto-detalle">126G - Dulce y delicado</p>
                     <p class="producto-precio">$120</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Mochis%20de%20Fresa')">PEDIR</button>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP001%5D%20Mochi%20Sabor%20Fresa')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 2 -->
-            <div class="producto-card">
+            <!-- P002 -->
+            <div class="producto-card" data-grupo="Snacks" data-id="P002" data-nombre="fideos samyang carbonara picante">
                 <div class="producto-imagen">
                     <img src="imagenes/buldak_carbonara.jpg" alt="Fideos Samyang Carbonara Picante" onerror="this.parentElement.textContent='🍜'">
                 </div>
@@ -394,25 +405,25 @@
                     <h3 class="producto-nombre">Fideos Samyang Carbonara Picante</h3>
                     <p class="producto-detalle">130G - Fideos picantes</p>
                     <p class="producto-precio">$50</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Buldak%20Carbonara')">PEDIR</button>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP002%5D%20Fideos%20Samyang%20Carbonara%20Picante')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 3 -->
-            <div class="producto-card">
+            <!-- P003 -->
+            <div class="producto-card" data-grupo="Snacks" data-id="P003" data-nombre="samyang sabor habanero limón">
                 <div class="producto-imagen">
-                    <img src="imagenes/buldak_spicyhabanero.webp" alt="Samyang Sabor Habanero Limón" onerror="this.parentElement.textContent='🌶️'">
+                    <img src="imagenes/buldak_spicyhabanero.webp" alt="Samyang Sabor Habanero Limón" onerror="this.parentElement.textContent='🌶'">
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-nombre">Samyang Sabor Habanero Limón</h3>
                     <p class="producto-detalle">135G - Fideos extra picantes</p>
                     <p class="producto-precio">$50</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Buldak%20Spicy%20Habanero')">PEDIR</button>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP003%5D%20Samyang%20Sabor%20Habanero%20Lim%C3%B3n')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 4 -->
-            <div class="producto-card">
+            <!-- P004 -->
+            <div class="producto-card" data-grupo="Snacks" data-id="P004" data-nombre="fideos 668g">
                 <div class="producto-imagen">
                     <img src="imagenes/fideos_caldo.png" alt="Fideos 668G" onerror="this.parentElement.textContent='🍲'">
                 </div>
@@ -420,51 +431,51 @@
                     <h3 class="producto-nombre">Fideos 668G</h3>
                     <p class="producto-detalle">668G - Sopa tradicional china</p>
                     <p class="producto-precio">$250</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Fideos%20en%20Caldo')">PEDIR</button>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP004%5D%20Fideos%20668G')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 5 -->
-            <div class="producto-card">
+            <!-- P005 -->
+            <div class="producto-card" data-grupo="Bebidas" data-id="P005" data-nombre="bebida lata de hierbas">
                 <div class="producto-imagen">
                     <img src="imagenes/te_herbal_wanglaoji.png" alt="Bebida Lata de Hierbas" onerror="this.parentElement.textContent='🍵'">
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-nombre">Bebida Lata de Hierbas</h3>
                     <p class="producto-detalle">310ML - Bebida refrescante</p>
-                    <p class="producto-precio">$70</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Té%20Herbal%20Wanglaoji')">PEDIR</button>
+                    <p class="producto-precio">$50</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP005%5D%20Bebida%20Lata%20de%20Hierbas')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 6 -->
-            <div class="producto-card">
+            <!-- P006 -->
+            <div class="producto-card" data-grupo="Bebidas" data-id="P006" data-nombre="bebida lata de hierbas premium">
                 <div class="producto-imagen">
                     <img src="imagenes/te_hierbas_jiduobao.webp" alt="Bebida Lata de Hierbas Premium" onerror="this.parentElement.textContent='🍶'">
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-nombre">Bebida Lata de Hierbas Premium</h3>
                     <p class="producto-detalle">310ML - Bebida herbal medicinal</p>
-                    <p class="producto-precio">$80</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Té%20de%20Hierbas%20Jiduobao')">PEDIR</button>
+                    <p class="producto-precio">$70</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP006%5D%20Bebida%20Lata%20de%20Hierbas%20Premium')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 7 -->
-            <div class="producto-card">
+            <!-- P007 -->
+            <div class="producto-card" data-grupo="Bebidas" data-id="P007" data-nombre="bebida leche de coco">
                 <div class="producto-imagen">
                     <img src="imagenes/bebida_lechecoco.jpeg" alt="Bebida Leche de Coco" onerror="this.parentElement.textContent='🥥'">
                 </div>
                 <div class="producto-info">
                     <h3 class="producto-nombre">Bebida Leche de Coco</h3>
                     <p class="producto-detalle">245ML - Bebida tropical</p>
-                    <p class="producto-precio">$90</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Bebida%20Leche%20Coco')">PEDIR</button>
+                    <p class="producto-precio">$70</p>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP007%5D%20Bebida%20Leche%20de%20Coco')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 8 -->
-            <div class="producto-card">
+            <!-- P008 -->
+            <div class="producto-card" data-grupo="Bebidas" data-id="P008" data-nombre="bebida sabor naranja">
                 <div class="producto-imagen">
                     <img src="imagenes/bebida_naranja_estilo_hong_kong.jpg" alt="Bebida Sabor Naranja" onerror="this.parentElement.textContent='🧡'">
                 </div>
@@ -472,12 +483,12 @@
                     <h3 class="producto-nombre">Bebida Sabor Naranja</h3>
                     <p class="producto-detalle">620ML - Bebida cítrica oriental</p>
                     <p class="producto-precio">$90</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Bebida%20Naranja%20Hong%20Kong')">PEDIR</button>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP008%5D%20Bebida%20Sabor%20Naranja')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 9 -->
-            <div class="producto-card">
+            <!-- P010 -->
+            <div class="producto-card" data-grupo="Dulces" data-id="P010" data-nombre="galleta de pocky">
                 <div class="producto-imagen">
                     <img src="imagenes/pocky_berries.webp" alt="Galleta de Pocky" onerror="this.parentElement.textContent='🫐'">
                 </div>
@@ -485,12 +496,12 @@
                     <h3 class="producto-nombre">Galleta de Pocky</h3>
                     <p class="producto-detalle">55G - Paletas crujientes</p>
                     <p class="producto-precio">$80</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Pocky%20Berries')">PEDIR</button>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP010%5D%20Galleta%20de%20Pocky')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 10 -->
-            <div class="producto-card">
+            <!-- P011 -->
+            <div class="producto-card" data-grupo="Dulces" data-id="P011" data-nombre="galleta sabor naranja">
                 <div class="producto-imagen">
                     <img src="imagenes/galletas_naranja.webp" alt="Galleta Sabor Naranja" onerror="this.parentElement.textContent='🍊'">
                 </div>
@@ -498,12 +509,12 @@
                     <h3 class="producto-nombre">Galleta Sabor Naranja</h3>
                     <p class="producto-detalle">85G - Galletas crujientes</p>
                     <p class="producto-precio">$50</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Galletas%20Naranja')">PEDIR</button>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP011%5D%20Galleta%20Sabor%20Naranja')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 11 -->
-            <div class="producto-card">
+            <!-- P012 -->
+            <div class="producto-card" data-grupo="Dulces" data-id="P012" data-nombre="galleta sabor piña">
                 <div class="producto-imagen">
                     <img src="imagenes/galletas_pina.webp" alt="Galleta Sabor Piña" onerror="this.parentElement.textContent='🍍'">
                 </div>
@@ -511,12 +522,12 @@
                     <h3 class="producto-nombre">Galleta Sabor Piña</h3>
                     <p class="producto-detalle">85G - Galletas tropicales</p>
                     <p class="producto-precio">$50</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Galletas%20Piña')">PEDIR</button>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP012%5D%20Galleta%20Sabor%20Pi%C3%B1a')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 12 -->
-            <div class="producto-card">
+            <!-- P013 -->
+            <div class="producto-card" data-grupo="Dulces" data-id="P013" data-nombre="galleta sabor limón">
                 <div class="producto-imagen">
                     <img src="imagenes/pocky_peach.jpg" alt="Galleta Sabor Limón" onerror="this.parentElement.textContent='🍑'">
                 </div>
@@ -524,12 +535,12 @@
                     <h3 class="producto-nombre">Galleta Sabor Limón</h3>
                     <p class="producto-detalle">85G - Paletas sabor limón</p>
                     <p class="producto-precio">$50</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Pocky%20Peach')">PEDIR</button>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP013%5D%20Galleta%20Sabor%20Lim%C3%B3n')">PEDIR</button>
                 </div>
             </div>
 
-            <!-- Producto 13 -->
-            <div class="producto-card">
+            <!-- P014 -->
+            <div class="producto-card" data-grupo="Bebidas" data-id="P014" data-nombre="polvo de matcha">
                 <div class="producto-imagen">
                     <img src="imagenes/polvo_matcha.jpg" alt="Polvo de Matcha" onerror="this.parentElement.textContent='💚'">
                 </div>
@@ -537,9 +548,11 @@
                     <h3 class="producto-nombre">Polvo de Matcha</h3>
                     <p class="producto-detalle">100G - Té verde premium</p>
                     <p class="producto-precio">$150</p>
-                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Interesado%20en:%20Polvo%20Matcha%20Premium')">PEDIR</button>
+                    <button class="producto-boton" onclick="window.open('https://wa.me/522222528778?text=Hola%20Loot%20Chino%2C%20quiero%20pedir%3A%20%5BP014%5D%20Polvo%20de%20Matcha')">PEDIR</button>
                 </div>
             </div>
+
+            <!-- PRODUCTOS:FIN -->
         </div>
     </div>
 
@@ -554,5 +567,27 @@
     <a href="https://wa.me/522222528778?text=Hola%20Loot%20Chino,%20me%20interesa%20conocer%20más%20sobre%20tus%20productos" class="whatsapp-btn" title="Contactar por WhatsApp">
         <span>💬</span>
     </a>
+    <script>
+        // Filtro por categoria. El atributo data-grupo lo escribe el Excel
+        // al publicar (columna "Grupo web" de 1_Inventario).
+        (function () {
+            var badges = document.querySelectorAll('.nav-bar .badge');
+            var tarjetas = document.querySelectorAll('.producto-card');
+
+            badges.forEach(function (b) {
+                b.addEventListener('click', function () {
+                    var filtro = b.dataset.filtro;
+
+                    badges.forEach(function (o) { o.classList.remove('activo'); });
+                    b.classList.add('activo');
+
+                    tarjetas.forEach(function (t) {
+                        var visible = (filtro === 'Todos') || (t.dataset.grupo === filtro);
+                        t.classList.toggle('oculto', !visible);
+                    });
+                });
+            });
+        })();
+    </script>
 </body>
 </html>

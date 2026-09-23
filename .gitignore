@@ -3,3 +3,9 @@ node_modules/
 .env
 .vercel/
 *.log
+
+# respaldo local previo a la integracion con Excel
+index.html.antes-de-integrar
+
+# notas de trabajo, no se publican
+imagenes/Claude outputs/

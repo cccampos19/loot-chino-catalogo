@@ -1,10 +1,10 @@
 {
-  "generado": "2026-09-22 21:24",
+  "generado": "2026-09-24 17:36",
   "origen": "Gestor_Loot_Chino_PRO.xlsm",
   "productos": [
     {"id": "P001", "nombre": "Mochi Sabor Fresa", "presentacion": "126G", "descripcion": "126G - Dulce y delicado", "grupo": "Dulces", "categoria": "MOCHIS", "precio": 120, "imagen": "imagenes/mochis_fresa.png"},
-    {"id": "P002", "nombre": "Fideos Samyang Carbonara Picante", "presentacion": "130G", "descripcion": "130G - Fideos picantes", "grupo": "Snacks", "categoria": "RAMEN/FIDEOS", "precio": 50, "imagen": "imagenes/buldak_carbonara.jpg"},
-    {"id": "P003", "nombre": "Samyang Sabor Habanero Limón", "presentacion": "135G", "descripcion": "135G - Fideos extra picantes", "grupo": "Snacks", "categoria": "RAMEN/FIDEOS", "precio": 50, "imagen": "imagenes/buldak_spicyhabanero.webp"},
+    {"id": "P002", "nombre": "Fideos Samyang Carbonara Picante", "presentacion": "130G", "descripcion": "130G - Fideos picantes", "grupo": "Snacks", "categoria": "RAMEN/FIDEOS", "precio": 40, "imagen": "imagenes/buldak_carbonara.jpg"},
+    {"id": "P003", "nombre": "Samyang Sabor Habanero Limón", "presentacion": "135G", "descripcion": "135G - Fideos extra picantes", "grupo": "Snacks", "categoria": "RAMEN/FIDEOS", "precio": 40, "imagen": "imagenes/buldak_spicyhabanero.webp"},
     {"id": "P004", "nombre": "Fideos 668G", "presentacion": "668G", "descripcion": "668G - Sopa tradicional china", "grupo": "Snacks", "categoria": "RAMEN/FIDEOS", "precio": 250, "imagen": "imagenes/fideos_caldo.png"},
     {"id": "P005", "nombre": "Bebida Lata de Hierbas", "presentacion": "310ML", "descripcion": "310ML - Bebida refrescante", "grupo": "Bebidas", "categoria": "BEBIDAS", "precio": 50, "imagen": "imagenes/te_herbal_wanglaoji.png"},
     {"id": "P006", "nombre": "Bebida Lata de Hierbas Premium", "presentacion": "310ML", "descripcion": "310ML - Bebida herbal medicinal", "grupo": "Bebidas", "categoria": "BEBIDAS", "precio": 70, "imagen": "imagenes/te_hierbas_jiduobao.webp"},

@@ -1,5 +1,5 @@
 {
-  "generado": "2026-09-24 17:36",
+  "generado": "2026-09-24 18:37",
   "origen": "Gestor_Loot_Chino_PRO.xlsm",
   "productos": [
     {"id": "P001", "nombre": "Mochi Sabor Fresa", "presentacion": "126G", "descripcion": "126G - Dulce y delicado", "grupo": "Dulces", "categoria": "MOCHIS", "precio": 120, "imagen": "imagenes/mochis_fresa.png"},
@@ -13,7 +13,7 @@
     {"id": "P010", "nombre": "Galleta de Pocky", "presentacion": "55G", "descripcion": "55G - Paletas crujientes", "grupo": "Dulces", "categoria": "GALLETAS", "precio": 80, "imagen": "imagenes/pocky_berries.webp"},
     {"id": "P011", "nombre": "Galleta Sabor Naranja", "presentacion": "85G", "descripcion": "85G - Galletas crujientes", "grupo": "Dulces", "categoria": "GALLETAS", "precio": 50, "imagen": "imagenes/galletas_naranja.webp"},
     {"id": "P012", "nombre": "Galleta Sabor Piña", "presentacion": "85G", "descripcion": "85G - Galletas tropicales", "grupo": "Dulces", "categoria": "GALLETAS", "precio": 50, "imagen": "imagenes/galletas_pina.webp"},
-    {"id": "P013", "nombre": "Galleta Sabor Limón", "presentacion": "85G", "descripcion": "85G - Paletas sabor limón", "grupo": "Dulces", "categoria": "GALLETAS", "precio": 50, "imagen": "imagenes/pocky_peach.jpg"},
+    {"id": "P013", "nombre": "Galleta de Pocky", "presentacion": "85G", "descripcion": "55G - Paletas crujientes", "grupo": "Dulces", "categoria": "GALLETAS", "precio": 50, "imagen": "imagenes/pocky_peach.jpg"},
     {"id": "P014", "nombre": "Polvo de Matcha", "presentacion": "100G", "descripcion": "100G - Té verde premium", "grupo": "Bebidas", "categoria": "MATCHA", "precio": 150, "imagen": "imagenes/polvo_matcha.jpg"}
   ]
 }
